@@ -35,11 +35,36 @@ jobs:
 
       - name: Build book
         run: |
-          jupyter-book build . --all
-        continue-on-error: false
-        env:
-          # Disable notebook execution to avoid dependency issues
-          JUPYTER_EXECUTE_NOTEBOOKS: "off"
+          echo "=== Starting Jupyter Book build ==="
+          echo "Current directory: $(pwd)"
+          echo "Python version: $(python --version)"
+          echo "Jupyter Book version: $(jupyter-book --version || echo 'not found')"
+          echo ""
+          echo "Checking configuration files:"
+          ls -la _config.yml _toc.yml index.md 2>&1 || echo "Some config files missing"
+          echo ""
+          echo "Checking notebooks:"
+          ls -la notebooks/zh-Hans/Chapter_0*.ipynb 2>&1 || echo "Notebooks not found"
+          echo ""
+          echo "=== Running jupyter-book build ==="
+          set -x
+          jupyter-book build . --all || {
+            echo "Build failed with exit code: $?"
+            echo "Last 50 lines of output:"
+            tail -50
+            exit 1
+          }
+          set +x
+          echo ""
+          echo "=== Build completed, checking output ==="
+          if [ -d "_build/html" ]; then
+            echo "✅ _build/html exists"
+            echo "First 10 files:"
+            ls -la _build/html/ | head -10
+          else
+            echo "❌ _build/html does not exist!"
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
