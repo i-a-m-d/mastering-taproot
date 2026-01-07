@@ -28,7 +28,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install jupyter-book sphinx
+          # Install specific version compatible with our config
+          pip install "jupyter-book<2.0" sphinx
           pip install -r requirements.txt 2>/dev/null || echo "No requirements.txt found"
           # Install notebook execution dependencies if needed
           pip install ipykernel 2>/dev/null || true
@@ -48,6 +49,7 @@ jobs:
           echo ""
           echo "=== Running jupyter-book build ==="
           set -x
+          # Use --all to rebuild all pages
           jupyter-book build . --all || {
             echo "Build failed with exit code: $?"
             echo "Last 50 lines of output:"
