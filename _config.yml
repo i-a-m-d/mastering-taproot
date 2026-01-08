@@ -4,6 +4,30 @@ title: Mastering Taproot
 author: aaron-recompile
 language: zh-Hans
 
+# Sphinx 配置（Jupyter Book 使用 Sphinx 作为后端）
+# 排除不需要的文件和目录（不构建到网站）
+sphinx:
+  config:
+    exclude_patterns:
+      - "book/**"
+      - "code/**"
+      - "notes/**"
+      - "memo/**"
+      - "worklog/**"
+      - "tools/**"
+      - "venv/**"
+      - ".venv/**"
+      - "env/**"
+      - "README.md"
+      - "NOTEBOOK_FRAMEWORK.md"
+      - ".git/**"
+      - ".ipynb_checkpoints/**"
+      - "_build/**"
+      - ".jupyter_cache/**"
+      - "notebooks/en/**"
+      - "**/*.pyc"
+      - "**/__pycache__/**"
+
 # 网站设置
 html:
   baseurl: ""  # 如果部署到子路径，填写子路径

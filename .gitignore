@@ -6,6 +6,10 @@ notes/
 notebooks/
 !notebooks/zh-Hans/*.ipynb
 
+# Work logs and memos (for OpenSats reporting and personal notes)
+worklog/
+memo/
+
 # Python virtual environments
 venv/
 env/
@@ -21,3 +25,24 @@ __pycache__/
 # Jupyter Book 构建输出
 _build/
 .jupyter_cache/
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Conda environment files
+.conda-environment
+conda-environment.yml
+
+# Local development scripts (not for public repo)
+activate_env.sh
+quick_activate.sh
+deploy_to_github_pages.sh
+
+# Internal development tools
+tools/
+NOTEBOOK_FRAMEWORK.md
+
+# Archive content (not for publication)
+book/manuscript/archive/
