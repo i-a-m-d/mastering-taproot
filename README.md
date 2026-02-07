@@ -33,9 +33,15 @@ Beginners may also use it as a structured, hands-on learning path.
 
 ### Status
 
-This is an active public draft.
+This is an active public draft. The full 12-chapter structure is now published.
 
-Updates are pushed regularly as chapters and code samples reach reproducible stability.
+| Chapters | Manuscript | Code | Maturity |
+|----------|-----------|------|----------|
+| Ch 1–8 | ✅ Published | ✅ Tested & published | **Stable** — all code tested on testnet |
+| Ch 9 | ✅ Published | ✅ Published | **Stable** — code tested on testnet |
+| Ch 10–12 | ✅ Published | 📝 In progress | **Draft** — structure and narrative complete; code examples in manuscripts not yet fully tested. Issues and PRs welcome. |
+
+The framework-first, code-iterative approach: the complete narrative arc from private keys to Silent Payments is in place. Code for Chapters 10–12 will be refined and uploaded incrementally.
 
 ⸻
 
@@ -51,11 +57,14 @@ An early MyST-based notebook version is being developed alongside this repositor
 
 ### Repository Structure
 
-All manuscript chapters are in:  
+Manuscripts (12 chapters):  
 [`book/manuscript/`](./book/manuscript/)
 
-The table of contents is maintained at:  
+Table of contents:  
 [`book/manuscript/SUMMARY.md`](./book/manuscript/SUMMARY.md)
+
+Code examples (Ch 1–8 published):  
+[`code/`](./code/)
 
 ---
 
@@ -118,107 +127,54 @@ This project values *precision and reproducibility* above abstraction or opinion
 
 *(latest development activity)*
 
-Jan 6–8, 2026 — Added code examples for Chapters 6–7, covering:
+**Feb 6, 2026 — Published Chapters 10–12 manuscripts and Chapter 8 code**
 
-• Single-leaf Taproot script tree construction
+Three new manuscript chapters completing the book's advanced application arc:
 
-• Commit-Reveal pattern implementation
+• Chapter 10 — RGB: Client-Side Validation & Taproot Commitments
 
-• Key Path and Script Path spending
+• Chapter 11 — Lightning Network Channels: From P2WSH Multisig to Taproot Privacy Channels
 
-• Dual-leaf Taproot script tree construction
+• Chapter 12 — Silent Payments: Elliptic Curve Arithmetic and Address Privacy
 
-• Control block verification and witness ordering
+These chapters explore four dimensions of Taproot's advanced capabilities:
 
-• Complete implementation with testnet-verified transactions
+| Chapter | Application | Taproot Capability |
+|---------|------------|-------------------|
+| Ch 9 | Ordinals & BRC-20 | Witness space as data container |
+| Ch 10 | RGB | Script path commitments anchoring off-chain state |
+| Ch 11 | Lightning Network | Key aggregation + script trees for privacy protocols |
+| Ch 12 | Silent Payments | EC arithmetic + output indistinguishability |
 
-Chapter 6 includes four scripts demonstrating the fundamental Taproot contract pattern:
+Chapter 8 code examples now published — full four-leaf MAST construction with all 7 spending paths:
 
-• 01_create_taproot_commitment.py
+• 01_create_four_leaf_taproot.py — Build a 4-leaf Taproot script tree
 
-• 02_key_path_spending.py
+• 02–05 — HashLock, Multisig, CSV Timelock, Simple Signature spending paths
 
-• 03_script_path_spending.py
+• 06_key_path_spending.py — Cooperative key path spend
 
-• 04_verify_script_execution.py
+• 07_verify_control_blocks.py — Control block validation for all paths
 
-Chapter 7 includes four scripts demonstrating the full dual-path spending flow:
-
-• 01_create_dual_leaf_taproot.py
-
-• 02_hash_script_path_spending.py
-
-• 03_bob_script_path_spending.py
-
-• 04_verify_control_block.py
+> **Note**: Ch 10–12 manuscripts are structural drafts — narrative and technical framework complete, code examples not yet fully tested. Feedback, issues, and PRs are welcome.
 
 ---
 
-Dec 5–20, 2025 — Added code examples for Chapters 1–5, covering:
-
-• Key generation and address encoding  
-
-• P2PKH / P2WPKH signing  
-
-• Complete P2SH spend flows  
-
-• SegWit transaction construction, witness execution, and byte-level parsing  
-
-• Taproot key tweaking (BIP340/341 math)
-
-Chapter 4 scripts were refactored into a clear three-part structure:
-
-• 01_legacy_vs_segwit_comparison.py  
-
-• 02_create_segwit_transaction.py  
-
-• 03_parse_segwit_transaction.py  
+Jan 6–8, 2026 — Added code examples for Chapters 6–7, covering single-leaf and dual-leaf Taproot script tree construction, Key Path and Script Path spending, control block verification, and complete testnet-verified transactions.
 
 ---
 
-Recent manuscript additions:
-
-• Chapter 9 — Ordinals & BRC-20 (Draft)  
-
-  – Taproot witness as a general-purpose data layer  
-
-  – Non-executable Tapscript envelopes  
-
-  – Commit / reveal patterns with testnet examples  
+Dec 5–20, 2025 — Added code examples for Chapters 1–5, covering key generation, P2PKH/P2WPKH signing, P2SH spend flows, SegWit transaction construction, and Taproot key tweaking (BIP340/341 math).
 
 ---
 
-Ongoing work (Jan 2026):
+### Roadmap
 
-• Chapter 8 (code in progress)  
+Upcoming work:
 
-  – Full four-leaf MAST constructions  
+• Code examples for Chapters 9–12 (incremental uploads as they reach testnet-verified stability)
 
-  – Control block generation and witness ordering  
-
-  – Testnet-verified multi-path spending examples  
-
----
-
-Upcoming (as chapters reach reproducible stability):
-
-• Chapter 10 — RGB  
-
-  – Tapret commitments  
-
-  – Consignment and PSBT-based workflows  
-
-  – Regtest-reproducible examples  
-
-  – Single-use seals and client-side validation  
-
-• Frontier Notes & Advanced Topics  
-
-  – Lightning with Taproot (MuSig2, PTLC, v3 anchor channels)  
-
-  – BitVM / Citrea and Taproot-anchored computation  
-
-  – Design-space notes connecting Ordinals → RGB → LN → BitVM into a unified Taproot framework
+• Interactive notebook edition (MyST-based, early preview)
 
 ---
 
