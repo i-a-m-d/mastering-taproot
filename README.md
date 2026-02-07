@@ -21,13 +21,11 @@ Foundational Bitcoin engineering knowledge should be reproducible, inspectable, 
 
 This project is intended for:
 
-- Bitcoin protocol engineers
-- Script / Taproot developers
+- Developers learning Bitcoin programming through hands-on construction (Chapters 1–8 provide a complete on-ramp)
+- Bitcoin protocol engineers and Script / Taproot developers
 - Wallet and key management system designers
-- Researchers studying Script, Merkle commitments, or Taproot privacy
-- Contributors preparing for Bitcoin Core or protocol-level work
-
-Beginners may also use it as a structured, hands-on learning path.
+- Researchers studying Schnorr signatures, Merkle commitments, or Taproot privacy
+- Anyone interested in Taproot's advanced applications: Ordinals, RGB, Lightning, and Silent Payments (Chapters 9–12)
 
 ---
 
@@ -175,6 +173,12 @@ Upcoming work:
 • Code examples for Chapters 9–12 (incremental uploads as they reach testnet-verified stability)
 
 • Interactive notebook edition (MyST-based, early preview)
+
+---
+
+### Acknowledgements
+
+This project is supported by [OpenSats](https://opensats.org/).
 
 ---
 
