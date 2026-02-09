@@ -47,17 +47,29 @@ The framework-first, code-iterative approach: the complete narrative arc from pr
 
 ⸻
 
-### Educational Use
+### Interactive Notebooks
 
-Parts of this repository will also be used in future Bitcoin developer onboarding sessions, further supporting newcomers entering Script, Taproot, and protocol-level engineering.
+An interactive companion with Jupyter notebooks is available at:
 
-**Notebook Edition (Early Preview):**
+**[mastering-taproot-interactive](https://github.com/aaron-recompile/mastering-taproot-interactive)** — run real Bitcoin Script examples step by step, modify parameters, and experiment with Taproot constructions interactively.
 
-An early MyST-based notebook version is being developed alongside this repository, enabling interactive execution of the core chapters (real testnet flows) as the project continues to mature.
+Live site: [bitcoincoding.dev](https://bitcoincoding.dev)
 
 ---
 
 ### Repository Structure
+
+```
+mastering-taproot/
+├── book/
+│   ├── manuscript/        # 12 chapters (English)
+│   └── translations/      # Community translations
+├── code/
+│   ├── chapter01/–09/     # Runnable Python examples
+│   └── (each chapter has README + requirements.txt)
+├── images/                # Cover art
+└── LICENSES/              # CC-BY-SA 4.0 (text) + MIT (code)
+```
 
 Manuscripts (12 chapters):  
 [`book/manuscript/`](./book/manuscript/)
@@ -65,7 +77,7 @@ Manuscripts (12 chapters):
 Table of contents:  
 [`book/manuscript/SUMMARY.md`](./book/manuscript/SUMMARY.md)
 
-Code examples (Ch 1–8 published):  
+Code examples (Ch 1–9 published):  
 [`code/`](./code/)
 
 ---
@@ -174,9 +186,7 @@ Dec 5–20, 2025 — Added code examples for Chapters 1–5, covering key genera
 
 Upcoming work:
 
-• Code examples for Chapters 9–12 (incremental uploads as they reach testnet-verified stability)
-
-• Interactive notebook edition (MyST-based, early preview)
+• Code examples for Chapters 10–12 (incremental uploads as they reach testnet-verified stability)
 
 ---
 

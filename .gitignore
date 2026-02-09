@@ -1,48 +1,54 @@
-# Local experimental content (not for GitHub)
-notes/
-# Allow notebooks/zh-Hans/ for GitHub Pages deployment
-!notebooks/
-!notebooks/zh-Hans/
+# ============================================================
+# Jupyter Book / Notebook infrastructure (moved to mastering-taproot-interactive)
+# ============================================================
 notebooks/
-!notebooks/zh-Hans/*.ipynb
-
-# Work logs and memos (for OpenSats reporting and personal notes)
-worklog/
-memo/
-
-# Python virtual environments
-venv/
-env/
-.venv/
-*.pyc
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Debug notes (internal only, not for publication)
-**/DEBUG_NOTES.md
-
-# Jupyter Book 构建输出
 _build/
+_config.yml
+_toc.yml
+index.md
+CNAME
+NOTEBOOK_FRAMEWORK.md
 .jupyter_cache/
 .ipynb_checkpoints/
 
-# macOS system files
-.DS_Store
-**/.DS_Store
-
-# Conda environment files
-.conda-environment
-conda-environment.yml
-
-# Local development scripts (not for public repo)
+# Deployment scripts (belong to interactive repo)
 activate_env.sh
 quick_activate.sh
 deploy_to_github_pages.sh
+.github/workflows/deploy.yml
 
-# Internal development tools
+# ============================================================
+# Private / local-only directories
+# ============================================================
+notes/
+worklog/
+memo/
 tools/
-NOTEBOOK_FRAMEWORK.md
 
-# Archive content (not for publication)
+# New book (not for this repo)
+book-cryptofund/
+notebooks-cryptofund/
+code-cryptofund/
+
+# Manuscript archive
 book/manuscript/archive/
+
+# ============================================================
+# Python
+# ============================================================
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class
+
+# ============================================================
+# System / IDE
+# ============================================================
+.DS_Store
+**/.DS_Store
+.conda-environment
+conda-environment.yml
+**/DEBUG_NOTES.md
