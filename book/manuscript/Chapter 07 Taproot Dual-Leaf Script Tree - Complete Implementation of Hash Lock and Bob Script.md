@@ -37,13 +37,13 @@ We will analyze the complete implementation of dual-leaf script trees based on t
 
 ### Transaction 1: Hash Script Path Spending
 
-- **Transaction ID**: `b61857a05852482c9d5ffbb8159fc2ba1efa3dd16fe4595f121fc35878a2e430`
+- **Transaction ID**: [`b61857a05852482c9d5ffbb8159fc2ba1efa3dd16fe4595f121fc35878a2e430`](https://mempool.space/testnet/tx/b61857a05852482c9d5ffbb8159fc2ba1efa3dd16fe4595f121fc35878a2e430?showDetails=true)
 - **Taproot Address**: `tb1p93c4wxsr87p88jau7vru83zpk6xl0shf5ynmutd9x0gxwau3tngq9a4w3z`
 - **Spending Method**: Script Path (using preimage "helloworld")
 
 ### Transaction 2: Bob Script Path Spending
 
-- **Transaction ID**: `185024daff64cea4c82f129aa9a8e97b4622899961452d1d144604e65a70cfe0`
+- **Transaction ID**: [`185024daff64cea4c82f129aa9a8e97b4622899961452d1d144604e65a70cfe0`](https://mempool.space/testnet/tx/185024daff64cea4c82f129aa9a8e97b4622899961452d1d144604e65a70cfe0?showDetails=true)
 - **Taproot Address**: `tb1p93c4wxsr87p88jau7vru83zpk6xl0shf5ynmutd9x0gxwau3tngq9a4w3z`
 - **Spending Method**: Script Path (using Bob's private key signature)
 
